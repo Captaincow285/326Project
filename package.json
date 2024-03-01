@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "326Project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,7 @@
   "homepage": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Captaincow285/326Project"
   },
   "bugs": "",
   "keywords": [],
@@ -22,17 +22,16 @@
     "email": "",
     "url": ""
   },
-  "contributors": [
-
-  ],
+  "contributors": [],
   "scripts": {
+    "milestone-01": "http-server src/docs/milestone-01 -p 3000 -c-1 -o -s",
+    "validate-html": "html-validate 'src/**/*.html'",
     "dev": "",
     "test": ""
   },
-  "dependencies": {
-
-  },
   "devDependencies": {
-
+    "html-validate": "^8.11.1",
+    "http-server": "^14.1.1",
+    "prettier": "^3.2.5"
   }
 }
