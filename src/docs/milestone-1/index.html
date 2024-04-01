@@ -1,78 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <script src="script.js" type="module"></script>
-        <title>326 Project</title>
-    </head>
-    <body>
-        <header>
 
+<head>
+    <script src="script.js" type="module"></script>
+    <title>326 Project</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav id="navbar">
+
+    </nav>
+    <main>
+        <header id="vision">
+            <h1>
+                TuneShare
+            </h1>
         </header>
-        <nav id="navbar">
+        <section id="team">
+            <h2>
+                Team Introductions
+            </h2>
+            <div id="member1">
+            </div>
+            <div id="member2">
+            </div>
+            <div id="member3">
+            </div>
+            <div id="member4">
+            </div>
+        </section>
+        <section id="overview">
+            <h2>
+                Overview
+            </h2>
+            <p>
+                Music is a meaningful way for people to communicate thoughts, emotions, and other aspects of
+                the human experience to one another. Sharing what songs, artists, and genres one is listening
+                to is a form of socializing that is highly demanded by many. However, today's most popular
+                music streaming services (Spotify, Apple Music, etc.) do not provide outlets for users to
+                easily share their music tastes on a broad scale. TuneShare aims to address this issue by
+                offering a place for music listeners to share Spotify playlists with not just their friends,
+                but all users of the site. Similar to traditional social media platforms, our application will
+                have features that allow users with an account to post playlists, upvote or downvote the
+                playlists of others, suggest additions to playlists, and more.
+            </p>
+            <img src="https://s3-alpha.figma.com/hub/file/2734964093/9f5edc36-eb4d-414a-8447-10514f2bc224-cover.png"
+                id="homepage-img" width="400" height="400">
+            <input type="button" id="img-btn" value="Next">
+        </section>
+        <section id="application-parts">
+            <h2>
+                Application Parts
+            </h2>
+        </section>
+        <section id="data-requirements">
+            <h2>
+                Data Requirements
+            </h2>
+            <p>
+                Structuring the data of our application will be crucial for scalability and ease of development. For our
+                project, we will need to store four types of data: users, playlists, votes, and comments.
 
-        </nav>
-        <main>
-            <header id="vision">
-                <h1>
-                    TuneShare
-                </h1>
-            </header>
-            <section id="team">
-                <h2>
-                    Team Introductions
-                </h2>
-                <div id="member1">
-                </div>
-                <div id="member2">
-                </div>
-                <div id="member3">
-                </div>
-                <div id="member4">
-                </div>
-            </section>
-            <section id="overview">
-                <h2>
-                    Overview
-                </h2>
-                <p>
-                    Music is a meaningful way for people to communicate thoughts, emotions, and other aspects of
-                    the human experience to one another. Sharing what songs, artists, and genres one is listening
-                    to is a form of socializing that is highly demanded by many. However, today's most popular
-                    music streaming services (Spotify, Apple Music, etc.) do not provide outlets for users to
-                    easily share their music tastes on a broad scale. TuneShare aims to address this issue by
-                    offering a place for music listeners to share Spotify playlists with not just their friends,
-                    but all users of the site. Similar to traditional social media platforms, our application will
-                    have features that allow users with an account to post playlists, upvote or downvote the
-                    playlists of others, suggest additions to playlists, and more.
-                </p>
-                <img src="https://s3-alpha.figma.com/hub/file/2734964093/9f5edc36-eb4d-414a-8447-10514f2bc224-cover.png" id="homepage-img" width="400" height="400">
-                <input type="button" id="img-btn" value="Next">
-            </section>
-            <section id="application-parts">
-                <h2>
-                    Application Parts
-                </h2>
-            </section>
-            <section id="data-requirements">
-                <h2>
-                    Data Requirements
-                </h2>
-            </section>
-            <section id="wire-frames">
-                <h2>
-                    Wireframes
-                </h2>
-            </section>
-            <section id="real-world">
-                <h2>
-                    Real-World Connection
-                </h2>
-            </section>
-            <section id="integrative-experience">
-                <h2>
-                    Integrative Experience
-                </h2>
-            </section>
-        </main>
-    </body>
+                The user data model is a cornerstone of our application, enabling essential features such as user
+                authentication and profile personalization. Each user will have a unique identifier (ex. UserID), which
+                is crucial for linking users to playlists, votes, and comments. We also want to store username and email
+                fields as these will be important for account creation and login. For security purposes, passwords will
+                be stored using a hashing algorithm. Optional features we may include to enhance user experience and
+                personalization are profile pictures and user bios.
+
+                Upvotes and downvotes are a simple, yet powerful way to gauge the quality and popularity of playlists
+                posted on our platform. Each vote should Have a VoteID, along with a PlaylistID and UserID to link votes
+                to a specific playlist as well as the user who cast it. We will also include a boolean field such as
+                IsUpvote to determine the type of each vote. This data model is crucial for allowing users to influence
+                the ranking of playlists posted to the platform.
+
+                Comments add a layer of interaction and discussion between users, and facilitate a communal space on the
+                platform. The data model for comments will consist of a unique CommentID, along with PlaylistID and
+                UserID to associate comments with specific users and playlists. We will also implement a Content field
+                to store the contents of a comment as well as a CreatedAt timestamp, so we can display the age of a
+                comment.
+
+                The playlist data model will serve as the heart of the application, the primary content around which
+                users interact with. Each playlist will have a unique PlaylistID for identification, as well as a UserID
+                to associate the user who submitted the playlist. We will have a SpotifyURL field that will be important
+                when fetching information from the Spotify API such as the track list. Fields like Title, Description,
+                and optionally CoverImage are important for displaying the playlist within the application, providing
+                users with a snapshot of what to expect before they decide to explore the playlist further. We also wish
+                to include timestamp information such as CreatedAt and UpdatedAt to help track the lifecycle of a
+                playlist submission, allowing for the management and update of playlist information over time.
+
+                In conclusion, the thoughtful structuring and management of data are pivotal to the success and
+                scalability of our application. By mindfully designing data models for users, votes, comments, and
+                playlists, we lay the groundwork for a dynamic and secure platform. This strategic approach to data
+                handling promises a scalable, user-centric platform poised for success.
+            </p>
+        </section>
+        <section id="wire-frames">
+            <h2>
+                Wireframes
+            </h2>
+        </section>
+        <section id="real-world">
+            <h2>
+                Real-World Connection
+            </h2>
+        </section>
+        <section id="integrative-experience">
+            <h2>
+                Integrative Experience
+            </h2>
+        </section>
+    </main>
+</body>
+
 </html>
