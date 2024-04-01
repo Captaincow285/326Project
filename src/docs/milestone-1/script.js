@@ -9,5 +9,6 @@ let btn = document.getElementById('img-btn');
 btn.addEventListener('click', nextImg);
 
 function nextImg() {
-    img.src = homepage_imgs[(index + 1) % homepage_imgs.length];
+    index++;
+    img.src = homepage_imgs[(index) % homepage_imgs.length];
 }
