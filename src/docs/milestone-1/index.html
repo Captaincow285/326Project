@@ -60,43 +60,63 @@
             <h2>
                 Data Requirements
             </h2>
-            <p>
-                Structuring the data of our application will be crucial for scalability and ease of development. For our
-                project, we will need to store four types of data: users, playlists, votes, and comments.
+        <p>
+          Structuring the data of our application will be crucial for
+          scalability and ease of development. For our project, we will need to
+          store four types of data: users, playlists, votes, and comments.
+        </p>
+        <p>
+          User authentication will be a cornerstone of our application. Each
+          user will have a unique identifier, "UserID", which will be crucial
+          for linking users to playlists, comments, and votes. Beyond a unique
+          identifier, we will store each user&apos;s email address, username,
+          and password. For security, we will run passwords through a hash
+          function, so we will not have direct access to the user's passwords.
+          Storing this information will be important for account creation and
+          login purposes. Optional information we may keep track of may include
+          profile pictures and bios.
+        </p>
+        <p>
+          Upvotes and downvotes are a simple way to gauge the quality and
+          popularity of playlists posted on our platform. We wish to keep track
+          of which user cast a vote, as well as if it is an upvote or downvote.
+          For this we will assign each vote a "VoteID", the "PlaylistID" of the
+          post the vote is cast on, the "UserID" of the user who cast the vote,
+          and a field such as "IsUpvote" to distinguish types of votes. By
+          modeling votes in this way, we hope to allow users to influence the
+          ranking of playlists posted on the platform seamlessly.
+        </p>
 
-                The user data model is a cornerstone of our application, enabling essential features such as user
-                authentication and profile personalization. Each user will have a unique identifier (ex. UserID), which
-                is crucial for linking users to playlists, votes, and comments. We also want to store username and email
-                fields as these will be important for account creation and login. For security purposes, passwords will
-                be stored using a hashing algorithm. Optional features we may include to enhance user experience and
-                personalization are profile pictures and user bios.
+        <p>
+          Comments serve to add a layer of interaction and discussion between
+          users. To implement a comment system we will need to keep track of the
+          "UserID" of the user that posted the comment, the "PlaylistID" of the
+          post where the comment resides, as well as a timestamp to display the
+          age of a comment, and of course the content of the comment itself.
+          Optionally we may add features such as replying to comments, and an
+          upvote/downvote system for comments.
+        </p>
 
-                Upvotes and downvotes are a simple, yet powerful way to gauge the quality and popularity of playlists
-                posted on our platform. Each vote should Have a VoteID, along with a PlaylistID and UserID to link votes
-                to a specific playlist as well as the user who cast it. We will also include a boolean field such as
-                IsUpvote to determine the type of each vote. This data model is crucial for allowing users to influence
-                the ranking of playlists posted to the platform.
+        <p>
+          The playlist data model will serve as the heart of the application,
+          the primary content around which users interact with. Each playlist
+          will have a unique "PlaylistID", as well as a "UserID" to associate
+          the user who submitted the playlist. We will have a field for the URL
+          of the playlist on Spotify, which will be especially important when
+          fetching information such as the tracklist and cover image. Other
+          fields we wish to include are the title, description, and creation
+          timestamp. The handling of playlist data via the Spotify API will be
+          an essential part of our application. Data will be fetched using the
+          Spotify URL asynchronously and loaded onto the page. This will ensure
+          that every playlist posted on the site is always up-to-date.
+        </p>
 
-                Comments add a layer of interaction and discussion between users, and facilitate a communal space on the
-                platform. The data model for comments will consist of a unique CommentID, along with PlaylistID and
-                UserID to associate comments with specific users and playlists. We will also implement a Content field
-                to store the contents of a comment as well as a CreatedAt timestamp, so we can display the age of a
-                comment.
-
-                The playlist data model will serve as the heart of the application, the primary content around which
-                users interact with. Each playlist will have a unique PlaylistID for identification, as well as a UserID
-                to associate the user who submitted the playlist. We will have a SpotifyURL field that will be important
-                when fetching information from the Spotify API such as the track list. Fields like Title, Description,
-                and optionally CoverImage are important for displaying the playlist within the application, providing
-                users with a snapshot of what to expect before they decide to explore the playlist further. We also wish
-                to include timestamp information such as CreatedAt and UpdatedAt to help track the lifecycle of a
-                playlist submission, allowing for the management and update of playlist information over time.
-
-                In conclusion, the thoughtful structuring and management of data are pivotal to the success and
-                scalability of our application. By mindfully designing data models for users, votes, comments, and
-                playlists, we lay the groundwork for a dynamic and secure platform. This strategic approach to data
-                handling promises a scalable, user-centric platform poised for success.
-            </p>
+        <p>
+          In conclusion, the thoughtful structuring and management of data will
+          ensure our application is scalable. By carefully designing data models
+          for users, votes, comments, and playlists, we lay the groundwork for a
+          dynamic and secure platform.
+        </p>
         </section>
         <section id="wire-frames">
             <h2>
