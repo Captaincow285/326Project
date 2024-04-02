@@ -1,3 +1,29 @@
-#navbar {
+li {
     display: inline
+}
+
+a {
+    display: block;
+    padding: 8px;
+    background-color: green;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+h2 {
+    text-align: right;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: right;
+}
+
+.team-intro {
+    background-color: aquamarine;
 }
