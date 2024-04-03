@@ -1,29 +1,35 @@
 li {
-    display: inline
+    float: left;
+    list-style-type: none;
 }
 
-a {
+li a {
     display: block;
     padding: 8px;
-    background-color: green;
+    background-color: darkgray;
+    text-decoration: none;
+    text-align: center;
 }
 
 nav li a:hover {
-  background-color: #111;
+  background-color: lightgreen;
 }
 
 h2 {
-    text-align: right;
+    text-align: left;
 }
 
 h1 {
     text-align: center;
 }
 
-p {
-    text-align: right;
-}
-
 .team-intro {
     background-color: aquamarine;
+}
+
+.bigPic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
