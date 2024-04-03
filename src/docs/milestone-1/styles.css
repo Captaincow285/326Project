@@ -43,3 +43,11 @@ button {
 .parent {
     display: flex;
 }
+
+.headshot {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    max-height: 200px;
+}
